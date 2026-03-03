@@ -2,7 +2,7 @@ import { DiCss3, DiHtml5, DiJavascript1, DiReact } from "react-icons/di";
 import { FaAws, FaBitbucket, FaConfluence, FaGitAlt, FaGithub, FaGitlab, FaInfinity, FaJava, FaJira, FaNodeJs, FaPython } from "react-icons/fa";
 import { FiDatabase } from "react-icons/fi";
 import { MdOutlineFilterTiltShift } from "react-icons/md";
-import { SiAmazonapigateway, SiAmazoneks, SiAmazons3, SiApachejmeter, SiApachekafka, SiAwslambda, SiBootstrap, SiClaude, SiCplusplus, SiDatadog, SiDocker, SiEclipseide, SiElasticsearch, SiExpress, SiFirebase, SiGithubcopilot, SiGo, SiGooglebigquery, SiGooglecloud, SiGooglegemini, SiGrafana, SiGraphql, SiHibernate, SiIntellijidea, SiJenkins, SiJest, SiJunit5, SiJupyter, SiKubernetes, SiMicrostrategy, SiMongodb, SiNestjs, SiNextdotjs, SiNginx, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPostgresql, SiPostman, SiPrisma, SiPrometheus, SiReactquery, SiRedis, SiRedux, SiShadcnui, SiSplunk, SiSpring, SiSpringboot, SiSpringsecurity, SiStripe, SiSwagger, SiTailwindcss, SiTerraform, SiTypescript, SiYaml } from "react-icons/si";
+import { SiAmazonapigateway, SiAmazoneks, SiAmazons3, SiApachejmeter, SiApachekafka, SiApachemaven, SiAwslambda, SiBootstrap, SiClaude, SiCplusplus, SiDatadog, SiDocker, SiEclipseide, SiElasticsearch, SiExpress, SiFirebase, SiGithubcopilot, SiGo, SiGooglebigquery, SiGooglecloud, SiGooglegemini, SiGradle, SiGrafana, SiGraphql, SiHibernate, SiIntellijidea, SiJenkins, SiJest, SiJunit5, SiJupyter, SiKubernetes, SiMicrostrategy, SiMongodb, SiNestjs, SiNextdotjs, SiNginx, SiNumpy, SiOpenai, SiOpencv, SiPandas, SiPostgresql, SiPostman, SiPrisma, SiPrometheus, SiReactquery, SiRedis, SiRedux, SiShadcnui, SiSplunk, SiSpring, SiSpringboot, SiSpringsecurity, SiStripe, SiSwagger, SiTailwindcss, SiTerraform, SiTypescript, SiYaml } from "react-icons/si";
 import { TbApi, TbBrandMysql } from "react-icons/tb";
 import { VscAzure, VscTerminalBash, VscVscode } from "react-icons/vsc";
 
@@ -95,6 +95,8 @@ export const TECH_ICONS: Record<string, React.ReactNode> = {
     "IntelliJ IDEA": <SiIntellijidea className={`${DEFAULT_CLASS} text-dark-500`} />,
     "Eclipse IDE": <SiEclipseide className={`${DEFAULT_CLASS} text-gray-600`} />,
     "Jupyter": <SiJupyter className={`${DEFAULT_CLASS} text-orange-600`} />,
+    "Maven": <SiApachemaven className={`${DEFAULT_CLASS} text-red-600`} />,
+    "Gradle": <SiGradle className={`${DEFAULT_CLASS} text-green-600`} />,
 
     // Testing & Quality
     "JUnit 5": <SiJunit5 className={`${DEFAULT_CLASS} text-red-600`} />,

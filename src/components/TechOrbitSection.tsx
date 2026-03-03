@@ -75,7 +75,7 @@ export default function TechOrbitSection() {
             duration={40}
             className=""
             showLabels={true}
-            labels={["Java", "TypeScript", "JavaScript", "Python", "Go", "SQL", "Bash", "JUnit 5", "Yaml", "C++"]}
+            labels={["Java", "TypeScript", "JavaScript", "Python", "Go", "SQL", "Bash/Shell"]}
           >
             {TECH_ICONS["Java"]}
             {TECH_ICONS["TypeScript"]}
@@ -83,10 +83,7 @@ export default function TechOrbitSection() {
             {TECH_ICONS["Python"]}
             {TECH_ICONS["Go"]}
             {TECH_ICONS["SQL"]}
-            {TECH_ICONS["Bash"]}
-            {TECH_ICONS["JUnit 5"]}
-            {TECH_ICONS["Yaml"]}
-            {TECH_ICONS["C++"]}
+            {TECH_ICONS["Bash/Shell"]}
           </OrbitingCircles>
 
           {/* Second orbit - Frontend Development */}
@@ -156,19 +153,18 @@ export default function TechOrbitSection() {
             duration={30}
             className=""
             showLabels={true}
-            labels={["GCP", "AWS", "Azure", "Docker", "Kubernetes", "Tilt", "CI/CD", "Nginx", "Jenkins", "Prometheus", "Terraform"]}
+            labels={["GCP", "AWS", "Docker", "Kubernetes", "Tilt", "CI/CD", "Nginx", "Jenkins", "Grafana", "Splunk"]}
           >
             {TECH_ICONS["GCP"]}
             {TECH_ICONS["AWS"]}
-            {TECH_ICONS["Azure"]}
             {TECH_ICONS["Docker"]}
             {TECH_ICONS["Kubernetes"]}
             {TECH_ICONS["Tilt"]}
             {TECH_ICONS["CI/CD"]}
             {TECH_ICONS["Nginx"]}
             {TECH_ICONS["Jenkins"]}
-            {TECH_ICONS["Prometheus"]}
-            {TECH_ICONS["Terraform"]}
+            {TECH_ICONS["Grafana"]}
+            {TECH_ICONS["Splunk"]}
           </OrbitingCircles>
 
           {/* Inner orbit - Development Tools (Fewer icons) */}
@@ -178,11 +174,11 @@ export default function TechOrbitSection() {
             duration={26}
             className=""
             showLabels={true}
-            labels={["Git", "GitHub", "VS Code", "Jest", "GitHub Copilot"]}
+            labels={["Git", "GitHub", "Maven", "Jest", "GitHub Copilot"]}
           >
             {TECH_ICONS["Git"]}
             {TECH_ICONS["GitHub"]}
-            {TECH_ICONS["VS Code"]}
+            {TECH_ICONS["Maven"]}
             {TECH_ICONS["Jest"]}
             {TECH_ICONS["GitHub Copilot"]}
           </OrbitingCircles>

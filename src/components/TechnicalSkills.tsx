@@ -8,18 +8,53 @@ import { GoStack } from "react-icons/go";
 import { FiCheckCircle, FiCloud, FiCode, FiDatabase, FiMonitor, FiServer } from "react-icons/fi";
 import { FaBrain, FaTools } from "react-icons/fa";
 import { TbPrompt } from "react-icons/tb";
+import { MdMonitorHeart } from "react-icons/md";
 
 export default function TechnicalSkills() {
   // Tech Skills Categories
   const techSkills = [
     {
-      category: "AI Coding Assistants",
-      icon: <AiFillCode className="h-3.5 w-3.5 text-gray-600" />,
+      category: "Backend & Architecture",
+      icon: <FiServer className="h-3.5 w-3.5 text-orange-500" />,
       skills: [
-        { name: "GitHub Copilot", icon: TECH_ICONS["GitHub Copilot"] },
-        { name: "Claude", icon: TECH_ICONS["Claude"] },
-        { name: "Gemini", icon: TECH_ICONS["Gemini"] },
-        { name: "Opus", icon: TECH_ICONS["Opus"] },
+        { name: "Spring Boot", icon: TECH_ICONS["Spring Boot"] },
+        { name: "Node.js", icon: TECH_ICONS["Node.js"] },
+        { name: "Nest.js", icon: TECH_ICONS["Nest.js"] },
+        { name: "Express.js", icon: TECH_ICONS["Express.js"] },
+        { name: "Kafka", icon: TECH_ICONS["Kafka"] },
+        { name: "Rest API", icon: TECH_ICONS["REST API"] },
+        { name: "Microservices", icon: TECH_ICONS["Microservices"] },
+        { name: "GRPC", icon: TECH_ICONS["GRPC"] },
+        { name: "API Gateway", icon: TECH_ICONS["API Gateway"] },
+      ]
+    },
+    {
+      category: "Cloud & DevOps",
+      icon: <FiCloud className="h-3.5 w-3.5 text-blue-600" />,
+      skills: [
+        { name: "GCP", icon: TECH_ICONS["GCP"] },
+        { name: "AWS", icon: TECH_ICONS["AWS"] },
+        // { name: "Azure", icon: TECH_ICONS["Azure"] },
+        { name: "Docker", icon: TECH_ICONS["Docker"] },
+        { name: "Kubernetes", icon: TECH_ICONS["Kubernetes"] },
+        { name: "Tilt", icon: TECH_ICONS["Tilt"] },
+        { name: "CI/CD", icon: TECH_ICONS["CI/CD"] },
+        { name: "Nginx", icon: TECH_ICONS["Nginx"] },
+        { name: "Jenkins", icon: TECH_ICONS["Jenkins"] },
+        // { name: "Terraform", icon: TECH_ICONS["Terraform"] },
+      ]
+    },
+    {
+      category: "Databases",
+      icon: <FiDatabase className="h-3.5 w-3.5 text-purple-500" />,
+      skills: [
+        { name: "MySQL", icon: TECH_ICONS["MySQL"] },
+        { name: "PostgreSQL", icon: TECH_ICONS["PostgreSQL"] },
+        { name: "MongoDB", icon: TECH_ICONS["MongoDB"] },
+        { name: "Redis", icon: TECH_ICONS["Redis"] },
+        { name: "Firebase", icon: TECH_ICONS["Firebase"] },
+        { name: "BigQuery", icon: TECH_ICONS["BigQuery"] },
+        { name: "Elasticsearch", icon: TECH_ICONS["Elasticsearch"] },
       ]
     },
     {
@@ -33,21 +68,6 @@ export default function TechnicalSkills() {
         { name: "Go", icon: TECH_ICONS["Go"] },
         { name: "SQL", icon: TECH_ICONS["SQL"] },
         { name: "Bash/Shell", icon: TECH_ICONS["Bash/Shell"] },
-      ]
-    },
-    {
-      category: "Backend Development",
-      icon: <FiServer className="h-3.5 w-3.5 text-orange-500" />,
-      skills: [
-        { name: "Spring Boot", icon: TECH_ICONS["Spring Boot"] },
-        { name: "Node.js", icon: TECH_ICONS["Node.js"] },
-        { name: "Nest.js", icon: TECH_ICONS["Nest.js"] },
-        { name: "Express.js", icon: TECH_ICONS["Express.js"] },
-        { name: "Kafka", icon: TECH_ICONS["Kafka"] },
-        { name: "Rest API", icon: TECH_ICONS["REST API"] },
-        { name: "Microservices", icon: TECH_ICONS["Microservices"] },
-        { name: "GRPC", icon: TECH_ICONS["GRPC"] },
-        { name: "API Gateway", icon: TECH_ICONS["API Gateway"] },
       ]
     },
     {
@@ -66,33 +86,47 @@ export default function TechnicalSkills() {
       ]
     },
     {
-      category: "Databases",
-      icon: <FiDatabase className="h-3.5 w-3.5 text-purple-500" />,
+      category: "Testing & API Documentation",
+      icon: <FiCheckCircle className="h-3.5 w-3.5 text-green-600" />,
       skills: [
-        { name: "MySQL", icon: TECH_ICONS["MySQL"] },
-        { name: "PostgreSQL", icon: TECH_ICONS["PostgreSQL"] },
-        { name: "MongoDB", icon: TECH_ICONS["MongoDB"] },
-        { name: "Redis", icon: TECH_ICONS["Redis"] },
-        { name: "Firebase", icon: TECH_ICONS["Firebase"] },
-        { name: "BigQuery", icon: TECH_ICONS["BigQuery"] },
+        { name: "JUnit 5", icon: TECH_ICONS["JUnit 5"] },
+        { name: "Mockito", icon: TECH_ICONS["Mockito"] },
+        { name: "JMeter", icon: TECH_ICONS["JMeter"] },
+        { name: "Jest", icon: TECH_ICONS["Jest"] },
+        { name: "Swagger", icon: TECH_ICONS["Swagger"] },
+      ]
+    },
+    // {
+    //   category: "AI/ML & Data Science",
+    //   icon: <FaBrain className="h-3.5 w-3.5 text-purple-600" />,
+    //   skills: [
+    //     // { name: "TensorFlow", icon: TECH_ICONS["TensorFlow"] },
+    //     // { name: "PyTorch", icon: TECH_ICONS["PyTorch"] },
+    //     // { name: "Keras", icon: TECH_ICONS["Keras"] },
+    //     // { name: "Scikit-learn", icon: TECH_ICONS["Scikit-learn"] },
+    //     { name: "Pandas", icon: TECH_ICONS["Pandas"] },
+    //     { name: "NumPy", icon: TECH_ICONS["NumPy"] },
+    //     { name: "OpenCV", icon: TECH_ICONS["OpenCV"] },
+    //   ]
+    // },
+    {
+      category: "Observability & Monitoring",
+      icon: <MdMonitorHeart className="h-3.5 w-3.5 text-gray-600" />,
+      skills: [
+        { name: "Prometheus", icon: TECH_ICONS["Prometheus"] },
+        { name: "Grafana", icon: TECH_ICONS["Grafana"] },
+        { name: "Splunk", icon: TECH_ICONS["Splunk"] },
+        { name: "Datadog", icon: TECH_ICONS["Datadog"] },
       ]
     },
     {
-      category: "Cloud & DevOps",
-      icon: <FiCloud className="h-3.5 w-3.5 text-blue-600" />,
+      category: "AI Coding Assistants",
+      icon: <AiFillCode className="h-3.5 w-3.5 text-gray-600" />,
       skills: [
-        { name: "GCP", icon: TECH_ICONS["GCP"] },
-        { name: "AWS", icon: TECH_ICONS["AWS"] },
-        // { name: "Azure", icon: TECH_ICONS["Azure"] },
-        { name: "Docker", icon: TECH_ICONS["Docker"] },
-        { name: "Kubernetes", icon: TECH_ICONS["Kubernetes"] },
-        { name: "Tilt", icon: TECH_ICONS["Tilt"] },
-        { name: "CI/CD", icon: TECH_ICONS["CI/CD"] },
-        { name: "Nginx", icon: TECH_ICONS["Nginx"] },
-        { name: "Jenkins", icon: TECH_ICONS["Jenkins"] },
-        { name: "Prometheus", icon: TECH_ICONS["Prometheus"] },
-        { name: "Grafana", icon: TECH_ICONS["Grafana"] },
-        { name: "Terraform", icon: TECH_ICONS["Terraform"] },
+        { name: "GitHub Copilot", icon: TECH_ICONS["GitHub Copilot"] },
+        { name: "Claude", icon: TECH_ICONS["Claude"] },
+        { name: "Gemini", icon: TECH_ICONS["Gemini"] },
+        { name: "Opus", icon: TECH_ICONS["Opus"] },
       ]
     },
     {
@@ -103,40 +137,16 @@ export default function TechnicalSkills() {
         { name: "GitHub", icon: TECH_ICONS["GitHub"] },
         { name: "GitLab", icon: TECH_ICONS["GitLab"] },
         { name: "Bitbucket", icon: TECH_ICONS["Bitbucket"] },
-        { name: "Jira", icon: TECH_ICONS["Jira"] },
-        { name: "Confluence", icon: TECH_ICONS["Confluence"] },
+        // { name: "Jira", icon: TECH_ICONS["Jira"] },
+        // { name: "Confluence", icon: TECH_ICONS["Confluence"] },
         { name: "Postman", icon: TECH_ICONS["Postman"] },
-        { name: "VS Code", icon: TECH_ICONS["VS Code"] },
-        { name: "IntelliJ IDEA", icon: TECH_ICONS["IntelliJ IDEA"] },
-        { name: "Eclipse IDE", icon: TECH_ICONS["Eclipse IDE"] },
+        // { name: "VS Code", icon: TECH_ICONS["VS Code"] },
+        // { name: "IntelliJ IDEA", icon: TECH_ICONS["IntelliJ IDEA"] },
+        // { name: "Eclipse IDE", icon: TECH_ICONS["Eclipse IDE"] },
         { name: "Jupyter", icon: TECH_ICONS["Jupyter"] },
+        { name: "Maven", icon: TECH_ICONS["Maven"] },
+        { name: "Gradle", icon: TECH_ICONS["Gradle"] },
         // { name: "Anaconda Navigator", icon: TECH_ICONS["Anaconda Navigator"] },
-      ]
-    },
-    {
-      category: "Testing & Quality",
-      icon: <FiCheckCircle className="h-3.5 w-3.5 text-green-600" />,
-      skills: [
-        { name: "JUnit 5", icon: TECH_ICONS["JUnit 5"] },
-        { name: "Mockito", icon: TECH_ICONS["Mockito"] },
-        { name: "JMeter", icon: TECH_ICONS["JMeter"] },
-        { name: "Jest", icon: TECH_ICONS["Jest"] },
-        { name: "Swagger", icon: TECH_ICONS["Swagger"] },
-        { name: "Splunk", icon: TECH_ICONS["Splunk"] },
-        { name: "Datadog", icon: TECH_ICONS["Datadog"] },
-      ]
-    },
-    {
-      category: "AI/ML & Data Science",
-      icon: <FaBrain className="h-3.5 w-3.5 text-purple-600" />,
-      skills: [
-        // { name: "TensorFlow", icon: TECH_ICONS["TensorFlow"] },
-        // { name: "PyTorch", icon: TECH_ICONS["PyTorch"] },
-        // { name: "Keras", icon: TECH_ICONS["Keras"] },
-        // { name: "Scikit-learn", icon: TECH_ICONS["Scikit-learn"] },
-        { name: "Pandas", icon: TECH_ICONS["Pandas"] },
-        { name: "NumPy", icon: TECH_ICONS["NumPy"] },
-        { name: "OpenCV", icon: TECH_ICONS["OpenCV"] },
       ]
     },
   ];
@@ -183,8 +193,8 @@ export default function TechnicalSkills() {
               AI/ML Integration
             </Badge>
             <Badge variant="secondary" className="text-xs">
-              <TbPrompt className="mr-1 h-3 w-3" />
-              Prompt Engineering
+              <MdMonitorHeart className="mr-1 h-3 w-3" />
+              Observability
             </Badge>
           </div>
         </div>
@@ -197,7 +207,7 @@ export default function TechnicalSkills() {
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
                 {techSkills.map((category, index) => (
                   <div key={index} className="rounded-xl border bg-background/40 p-4 backdrop-blur">
-                    <p className="flex items-center gap-1.5 text-[11px] font-medium text-foreground/70">
+                    <p className="flex items-center gap-1.5 text-xs font-medium text-foreground/70">
                       {category.icon}
                       <span>{category.category}</span>
                     </p>
