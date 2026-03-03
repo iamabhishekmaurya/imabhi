@@ -15,9 +15,9 @@ export default function Footer() {
           <p>
             © {year} Abhishek Maurya. All rights reserved.
           </p>
-          <p className="text-[10px] sm:text-[11px]">
+          {/* <p className="text-[10px] sm:text-[11px]">
             Built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
-          </p>
+          </p> */}
         </div>
       </div>
     </footer>
