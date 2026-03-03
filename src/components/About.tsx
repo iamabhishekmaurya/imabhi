@@ -45,7 +45,7 @@ export default function About() {
             Senior Software Engineer building scalable, cloud‑native systems.
           </h2>
           <p className="mt-4 text-balance text-sm text-muted-foreground md:text-base">
-            Backend‑focused full‑stack engineer with 6+ years of experience designing
+            Backend‑focused full‑stack engineer with 7 years of experience designing
             microservices, event‑driven architectures, and production‑grade APIs in
             Java, Spring Boot, and Node.js.
           </p>
@@ -57,7 +57,8 @@ export default function About() {
               <CardTitle className="text-xl">Who I am</CardTitle>
               <CardDescription>
                 <strong className="font-semibold">Senior engineer</strong> who enjoys turning complex requirements into clean,
-                reliable services.
+                reliable services. I regularly explore new tools, patterns, and open‑source projects to
+                keep my skills sharp and my perspectives fresh.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6 text-sm font-medium/80 text-muted-foreground">
@@ -67,14 +68,14 @@ export default function About() {
                   I'm <strong className="font-semibold text-foreground">Abhishek Maurya</strong>, a backend-leaning full-stack engineer based in Noida, India. I specialize in architecting <strong className="font-semibold text-foreground">RESTful and event-driven systems</strong> that solve complex business problems at scale.
                 </p>
                 <p>
-                  With more than <strong className="font-semibold text-foreground">6+ years</strong> of experience, I’ve led platform migrations (Java 17/SpringBoot 3), built Kafka pipelines processing <strong className="font-semibold text-foreground">2M+ daily events</strong>, and optimized high-throughput APIs for 30% faster response times.
+                  With 7 years of experience, I’ve <strong className="font-semibold text-foreground">led platform migrations</strong> (Java 17/SpringBoot 3), built Kafka pipelines processing <strong className="font-semibold text-foreground">2M+ daily user activity events</strong>, and optimized high-throughput APIs for 30% faster response times.
                 </p>
               </div>
 
               {/* Key Impact Points - Scannable Bulleted List */}
               <div className="grid gap-3 border-t pt-6">
                 <h4 className="text-xs font-bold uppercase tracking-wider text-foreground/70">Technical Philosophy</h4>
-                <ul className="grid gap-2 text-[13px]">
+                <ul className="grid gap-2 text-xs">
                   <li className="flex items-start gap-2">
                     <span className="text-primary mt-1">✓</span>
                     <span><strong className="text-foreground font-semibold">Cloud-Native:</strong> Expert in AWS/GCP, Docker, and Kubernetes for resilient service orchestration.</span>
@@ -151,10 +152,6 @@ export default function About() {
                     <span>2014 – 2017</span>
                   </p>
                 </div>
-                <p>
-                  I regularly explore new tools, patterns, and open‑source projects to
-                  keep my skills sharp and my perspectives fresh.
-                </p>
               </CardContent>
             </Card>
           </div>
