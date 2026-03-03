@@ -6,11 +6,20 @@ import { Button } from "@/components/ui/button";
 import { Meteors } from "@/components/ui/meteors";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import type React from "react";
+import React, { useEffect, useState } from "react";
 import { TECH_ICONS } from "@/config/tech-stack";
-import { FiActivity, FiInfo, FiLayers, FiTarget } from "react-icons/fi";
+import { FiActivity, FiClock, FiInfo, FiLayers, FiTarget } from "react-icons/fi";
+import { fetchLastUpdateDate } from "@/lib/github";
 
 export default function Hero() {
+  const [lastUpdateDate, setLastUpdateDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    fetchLastUpdateDate()
+      .then(date => setLastUpdateDate(date))
+      .catch(console.error);
+  }, []);
+
   const handleSnapshotMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
     const rect = card.getBoundingClientRect();
@@ -97,7 +106,7 @@ export default function Hero() {
               </Button>
 
               <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                <Badge variant="outline" className="flex items-center gap-2 border-dashed px-3 py-1">
+                <Badge variant="outline" className="flex items-center gap-2 border-solid px-3 py-1">
                   <span className="flex items-center gap-1 text-[11px] text-foreground/80">
                     {TECH_ICONS["Java"]}
                     <span>Java</span>
@@ -111,7 +120,7 @@ export default function Hero() {
                     <span>Kafka</span>
                   </span>
                   <span className="flex items-center gap-1 text-[11px] text-foreground/80">
-                    {TECH_ICONS["Node"]}
+                    {TECH_ICONS["Node.js"]}
                     <span>Node</span>
                   </span>
                 </Badge>
@@ -138,7 +147,7 @@ export default function Hero() {
                   <FiActivity className="h-3 w-3 text-amber-500" />
                   <span>Currently</span>
                 </p>
-                <p className="mt-1 text-sm font-semibold text-foreground">Working on URL Shortner App</p>
+                <p className="mt-1 text-sm font-semibold text-foreground">Architecting a high-throughput dynamic QR & link routing platform</p>
               </div>
             </div>
           </motion.div>
@@ -165,9 +174,9 @@ export default function Hero() {
                   observable, and easy for teams to evolve.
                 </p>
                 <div className="mt-4 space-y-2 text-xs text-muted-foreground">
-                  <p>• 6+ years across high‑throughput, microservice‑driven platforms</p>
-                  <p>• Comfortable from API design to CI/CD and production operations</p>
-                  <p>• Known for automation, performance tuning, and mentoring teams</p>
+                  <p>• 7 years engineering distributed, event-driven microservices at scale</p>
+                  <p>• Strong ownership culture spanning architecture, CI/CD, and observability</p>
+                  <p>• Force multiplier known for performance tuning and team mentorship</p>
                 </div>
               </div>
             </div>
@@ -176,8 +185,8 @@ export default function Hero() {
 
         <div className="pointer-events-none mt-16 flex justify-center text-xs text-muted-foreground">
           <div className="flex items-center gap-2 rounded-full border bg-background/70 px-4 py-1 shadow-sm backdrop-blur">
-            <span className="h-1 w-1 rounded-full bg-muted-foreground" />
-            <span>Last Update on 22 Nov 2025</span>
+            {/* <span className="h-1 w-1 rounded-full bg-muted-foreground" /> */}
+            <FiClock className="h-3 w-3 text-emerald-500" /><span>Last Update in {lastUpdateDate || "Mar 2026"}</span>
           </div>
         </div>
       </div>

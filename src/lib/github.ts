@@ -45,7 +45,7 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
     }
 
     const repos: GitHubRepo[] = await response.json();
-    
+
     // Filter out forks and archived repos, sort by stars and last updated
     return repos
       .filter(repo => !repo.fork && !repo.archived && !repo.disabled)
@@ -63,16 +63,53 @@ export async function fetchGitHubRepos(): Promise<GitHubRepo[]> {
   }
 }
 
+export async function fetchLastUpdateDate(): Promise<string> {
+  try {
+    const response = await fetch(
+      `${GITHUB_API_BASE}/repos/${GITHUB_USERNAME}/imabhi/branches/main`,
+      {
+        headers: {
+          'Accept': 'application/vnd.github.v3+json',
+          'User-Agent': 'Portfolio-App',
+        },
+        next: { revalidate: 3600 } // Cache for 1 hour
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status}`);
+    }
+
+    const data = await response.json();
+    const date = new Date(data.commit.commit.author.date);
+
+    // Format as "22 Nov 2025"
+    return date.toLocaleDateString('en-GB', {
+      // day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+  } catch (error) {
+    console.error('Error fetching last update date:', error);
+    // Fallback to current date on error
+    return new Date().toLocaleDateString('en-GB', {
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric'
+    });
+  }
+}
+
 export function mapGitHubRepoToProject(repo: GitHubRepo) {
   const language = repo.language || 'Unknown';
-  const lastUpdated = new Date(repo.updated_at).toLocaleDateString('en-US', { 
-    month: 'short', 
-    year: 'numeric' 
+  const lastUpdated = new Date(repo.updated_at).toLocaleDateString('en-US', {
+    month: 'short',
+    year: 'numeric'
   });
 
   // Determine category based on repo characteristics
   let category: 'featured' | 'open-source' | 'in-progress' | 'maintenance' | 'archived' = 'open-source';
-  
+
   if (repo.stargazers_count >= 5) {
     category = 'featured';
   } else if (repo.topics.includes('wip') || repo.topics.includes('in-progress')) {
@@ -95,7 +132,7 @@ export function mapGitHubRepoToProject(repo: GitHubRepo) {
     featured: repo.stargazers_count >= 5,
     problem: repo.description ? undefined : 'No detailed problem statement available.',
     approach: `Built with ${language} and modern development practices. Focus on clean code and maintainability.`,
-    impact: repo.stargazers_count > 0 
+    impact: repo.stargazers_count > 0
       ? `Starred by ${repo.stargazers_count} developer${repo.stargazers_count !== 1 ? 's' : ''} on GitHub.`
       : 'Open source contribution to the developer community.'
   };
