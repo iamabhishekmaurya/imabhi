@@ -97,7 +97,7 @@ export default function Hero() {
               </p>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-2">
               <Button asChild size="lg">
                 <Link href="#contact">Let&apos;s work together</Link>
               </Button>
